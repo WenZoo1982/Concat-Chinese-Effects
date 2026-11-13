@@ -1,0 +1,20 @@
+[effect]
+id = "wenzoo.distorted-cn"
+name = "失真音效"
+kind = "audio"
+category = "音色"
+order = 26
+intensity = "drive"
+description = "大幅增强驱动效果，并对声音进行削波失真处理。"
+
+[[param]]
+key = "drive"
+label = "驱动强度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[ffmpeg]
+chain = "volume={fixed(1 + drive / 100 * 7, 2)},acrusher=bits=6:mode=lin:mix={fixed(drive / 100 * 0.7, 2)},alimiter=limit=0.85:level=false"

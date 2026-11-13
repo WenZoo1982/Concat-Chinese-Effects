@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.noir-cn"
+name = "黑色电影"
+kind = "filter"
+category = "电影感"
+order = 50
+description = "降低饱和度并强化厚重影调，在阴影中加入冷色，同时压暗画面边缘，营造冷峻的黑色电影氛围。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.night-cn"
+name = "夜景提亮"
+kind = "filter"
+category = "电影感"
+order = 33
+intensity = "lift"
+description = "提亮低光环境中的暗部，并在噪点变得明显前先进行柔化，同时保留白色细节和夜景原有的蓝色氛围。"
+
+[[param]]
+key = "lift"
+label = "暗部提亮"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "clarity"
+label = "清晰度"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

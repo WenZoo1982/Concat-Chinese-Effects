@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.soft-light-cn"
+name = "柔和光感"
+kind = "filter"
+category = "日常"
+order = 13
+intensity = "lift"
+description = "营造哑光质感：抬高黑位、柔和压低白色、降低对比度，并在高光中加入带有奶油色调的柔和光晕，让画面轻盈、柔美。"
+
+[[param]]
+key = "lift"
+label = "黑位提升"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

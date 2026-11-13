@@ -1,0 +1,24 @@
+format = 2
+
+[effect]
+id = "wenzoo.fisheye-cn"
+name = "鱼眼"
+version = 2
+kind = "effect"
+category = "扭曲"
+shelves = ["光学与镜头"]
+order = 52
+intensity = "strength"
+description = "模拟超广角鱼眼镜头产生的强烈鼓胀畸变。"
+
+[[param]]
+key = "strength"
+label = "强度"
+min = 5
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"

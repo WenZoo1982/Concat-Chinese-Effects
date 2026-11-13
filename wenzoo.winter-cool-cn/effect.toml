@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.winter-cool-cn"
+name = "冬日冷调"
+kind = "filter"
+category = "风景"
+order = 59
+description = "降低饱和度并加入蓝色调，同时抬高黑位，营造哑光质感的冬日朦胧氛围。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

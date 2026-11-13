@@ -1,0 +1,67 @@
+format = 2
+
+[effect]
+id = "wenzoo.halation-cn"
+name = "胶片晕光"
+version = 2
+kind = "effect"
+category = "胶片"
+order = 150
+intensity = "amount"
+description = "在过曝高光周围形成红橙色光晕，模拟光线穿过胶片乳剂、经片基散射后再次返回所产生的效果。"
+
+[[param]]
+key = "threshold"
+label = "高光阈值"
+min = 20
+max = 95
+default = 55
+step = 1
+unit = "%"
+
+[[param]]
+key = "radius"
+label = "光晕半径"
+min = 4
+max = 60
+default = 22
+step = 1
+unit = "%"
+
+[[param]]
+key = "amount"
+label = "强度"
+min = 0
+max = 100
+default = 45
+step = 1
+unit = "%"
+
+[[param]]
+key = "tint"
+label = "色彩倾向"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+# A parameter carries no description field of its own (Param has no such
+# key, and the manifest denies unknown fields): negative is the deep red of
+# a dense negative, positive the orange of a print, zero the red-orange of
+# the stock.
+
+[wgsl]
+entry = "effect.wgsl"
+
+# The halo is a wide Gaussian over the bright parts, drawn across and then
+# down at a quarter of the layer's pixels.
+[[wgsl.pass]]
+target = "across"
+shrink = ["4", "1"]
+
+[[wgsl.pass]]
+target = "down"
+shrink = ["4", "4"]
+
+[card]
+params = { threshold = 38, amount = 75 }

@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.blur-dissolve-cn"
+name = "模糊溶解"
+kind = "transition"
+category = "溶解"
+order = 1
+description = "转场切换前，两段画面逐渐变得模糊；镜头在模糊中完成切换，随后下一段画面重新变得清晰。"
+
+[[param]]
+key = "strength"
+label = "强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 60
+
+[transition]
+fallback = "cross-fade"
+xfade = "dissolve"
+entry = "effect.wgsl"

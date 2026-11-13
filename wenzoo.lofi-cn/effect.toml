@@ -1,0 +1,19 @@
+[effect]
+id = "wenzoo.lofi-cn"
+name = "低保真音效"
+kind = "audio"
+category = "音色"
+order = 25
+intensity = "bits"
+description = "模拟老式小音箱的声音：削弱高频，并加入粗粝的颗粒感。"
+
+[[param]]
+key = "bits"
+label = "位深"
+min = 4
+max = 12
+default = 8
+step = 1
+
+[ffmpeg]
+chain = "lowpass=f=3200,acrusher=bits={round(bits)}:mode=log:mix=0.8,alimiter=limit=0.9"

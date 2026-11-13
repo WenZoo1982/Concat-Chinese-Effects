@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.after-hours-cn"
+name = "深夜时分"
+kind = "filter"
+category = "电影感"
+order = 37
+intensity = "depth"
+description = "压暗黑色、为画面整体加入冷色调，同时保留灯光的色彩，并降低饱和度、略微增加颗粒感，适合深夜场景。"
+
+[[param]]
+key = "depth"
+label = "深度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "grain"
+label = "颗粒"
+min = 0
+max = 100
+default = 25
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

@@ -1,0 +1,59 @@
+format = 2
+
+[effect]
+id = "wenzoo.shake-cn"
+name = "镜头抖动"
+kind = "effect"
+category = "抖动"
+order = 4
+intensity = "amount"
+description = "模拟无法保持稳定的手持摄影机：可选择手持漂移、紧张抖动或强烈震动，并带有独立的旋转和拖影效果。"
+
+[[param]]
+key = "style"
+label = "抖动风格"
+type = "enum"
+values = [0, 1, 2]
+labels = ["手持", "抖动", "震动"]
+default = 0
+min = 0
+max = 2
+
+[[param]]
+key = "amount"
+label = "强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 50
+
+[[param]]
+key = "speed"
+label = "速度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 50
+
+[[param]]
+key = "rotation"
+label = "旋转幅度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 40
+
+[[param]]
+key = "blur"
+label = "动态模糊"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 40
+
+[wgsl]
+entry = "effect.wgsl"

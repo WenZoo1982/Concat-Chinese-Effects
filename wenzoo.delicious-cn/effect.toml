@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.delicious-cn"
+name = "美味"
+kind = "filter"
+category = "美食"
+order = 54
+description = "为美食画面增加温暖感和饱和度，让食物看起来更诱人。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

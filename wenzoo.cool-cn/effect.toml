@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.cool-cn"
+name = "冷色调"
+kind = "filter"
+category = "色彩"
+order = 31
+intensity = "temperature"
+description = "将画面色温调整为偏冷的日光阴影效果。"
+
+[[param]]
+key = "temperature"
+label = "色温"
+min = 7000
+max = 11000
+default = 8500
+step = 50
+unit = "K"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

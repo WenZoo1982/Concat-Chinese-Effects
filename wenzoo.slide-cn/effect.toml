@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.slide-cn"
+name = "滑动转场"
+kind = "transition"
+category = "滑动"
+order = 4
+description = "下一个镜头从指定方向滑入并停稳，同时在被覆盖的画面上投下柔和阴影。"
+
+[[param]]
+key = "direction"
+label = "方向"
+type = "enum"
+values = [0, 1, 2, 3]
+labels = ["向左", "向右", "向上", "向下"]
+default = 0
+min = 0
+max = 3
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

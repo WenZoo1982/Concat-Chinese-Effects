@@ -1,0 +1,20 @@
+[effect]
+id = "wenzoo.bright-cn"
+name = "高频提亮"
+kind = "audio"
+category = "音色"
+order = 22
+intensity = "gain"
+description = "增强空气感和临场感：提升 6 kHz 以上的高频。"
+
+[[param]]
+key = "gain"
+label = "增益"
+min = 0
+max = 12
+default = 5
+step = 0.5
+unit = "dB"
+
+[ffmpeg]
+chain = "treble=g={fixed(gain, 2)}:f=6000:w=0.8,alimiter=limit=0.95"

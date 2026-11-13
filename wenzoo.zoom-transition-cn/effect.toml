@@ -1,0 +1,24 @@
+format = 2
+
+[effect]
+id = "wenzoo.zoom-transition-cn"
+name = "缩放转场"
+kind = "transition"
+category = "缩放"
+order = 3
+description = "摄影机连续推进，先进入上一个镜头，再从中推进到下一个镜头，并通过速度变化形成拖影。"
+
+[[param]]
+key = "direction"
+label = "方向"
+type = "enum"
+values = [0, 1]
+labels = ["推进", "拉远"]
+default = 0
+min = 0
+max = 1
+
+[transition]
+fallback = "cross-fade"
+xfade = "zoomin"
+entry = "effect.wgsl"

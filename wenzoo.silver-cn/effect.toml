@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.silver-cn"
+name = "银盐黑白"
+kind = "filter"
+category = "黑白"
+order = 65
+description = "呈现冷调、柔和的黑白影像，并适度提亮阴影，模拟银盐相纸的质感。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

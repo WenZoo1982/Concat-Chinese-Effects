@@ -1,0 +1,33 @@
+format = 2
+
+[effect]
+id = "wenzoo.neon-cn"
+name = "霓虹夜色"
+kind = "filter"
+category = "风格化"
+shelves = ["派对与夜店"]
+order = 51
+intensity = "glow"
+description = "在阴影中加入洋红色，在高光中加入青色，同时增强对比度、饱和度和灯光光晕，适合夜晚街道与霓虹招牌。"
+
+[[param]]
+key = "glow"
+label = "光晕强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "punch"
+label = "色彩冲击"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

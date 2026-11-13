@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.fresh-cn"
+name = "清新明亮"
+kind = "filter"
+category = "日常"
+order = 10
+intensity = "pop"
+description = "让日光拍摄的画面更加鲜活：提亮中间调，增强较为暗淡的色彩，在最明亮的白色区域加入一丝薄荷色，同时保持肤色自然。"
+
+[[param]]
+key = "pop"
+label = "鲜活程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[[param]]
+key = "brightness"
+label = "亮度"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

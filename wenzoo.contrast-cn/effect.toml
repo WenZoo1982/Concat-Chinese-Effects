@@ -1,0 +1,27 @@
+format = 2
+
+[effect]
+id = "wenzoo.contrast-cn"
+name = "对比度"
+kind = "effect"
+category = "色彩"
+order = 11
+intensity = "amount"
+description = "以中间灰为基准，按曝光档位增强或降低对比度，同时保留超过白色的高光细节，避免黑位被压死。"
+
+[[param]]
+key = "amount"
+label = "对比度"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+
+# At its default the picture is as shot; the card shows a push.
+[card]
+params = { amount = 40 }

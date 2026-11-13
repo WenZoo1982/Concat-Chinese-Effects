@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.warm-cn"
+name = "暖色调"
+kind = "filter"
+category = "色彩"
+order = 30
+intensity = "temperature"
+description = "将画面色温调整为偏向烛光的温暖色调。"
+
+[[param]]
+key = "temperature"
+label = "色温"
+min = 3000
+max = 6000
+default = 4600
+step = 50
+unit = "K"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

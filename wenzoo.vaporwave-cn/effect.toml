@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.vaporwave-cn"
+name = "蒸汽波"
+kind = "filter"
+category = "氛围"
+order = 67
+description = "强烈增强洋红色与青色，呈现高饱和度的复古合成器视觉风格。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

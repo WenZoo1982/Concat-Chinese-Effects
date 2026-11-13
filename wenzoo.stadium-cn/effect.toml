@@ -1,0 +1,19 @@
+[effect]
+id = "wenzoo.stadium-cn"
+name = "体育场混响"
+kind = "audio"
+category = "空间"
+order = 35
+intensity = "size"
+description = "模拟大型体育场和竞技场中辽阔、悠长的回声与混响。"
+
+[[param]]
+key = "size"
+label = "空间大小"
+min = 1
+max = 10
+default = 6
+step = 0.5
+
+[ffmpeg]
+chain = "aecho=0.8:0.88:{round(120 + size * 18)}|{round(240 + size * 36)}:0.45|0.28,lowpass=f=6500"

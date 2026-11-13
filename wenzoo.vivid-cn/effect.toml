@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.vivid-cn"
+name = "鲜艳增强"
+kind = "filter"
+category = "日常"
+order = 11
+intensity = "colour"
+description = "增强色彩表现力和对比度，并适度强化画面细节，呈现更出色的相机直出效果，同时避免肤色过度增强。"
+
+[[param]]
+key = "colour"
+label = "色彩强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "punch"
+label = "画面冲击力"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

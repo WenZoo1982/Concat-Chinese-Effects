@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.zoom-blur-transition-cn"
+name = "变焦模糊转场"
+kind = "transition"
+category = "缩放"
+order = 15
+description = "摄影机带着放射状拖影猛然推近上一个镜头，随后下一个镜头从变焦运动中迅速展开。"
+
+[[param]]
+key = "strength"
+label = "强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 70
+
+[transition]
+fallback = "cross-fade"
+xfade = "zoomin"
+entry = "effect.wgsl"

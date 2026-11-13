@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.bronze-cn"
+name = "青铜色调"
+kind = "filter"
+category = "复古"
+order = 42
+intensity = "tone"
+description = "棕褐色调，同时保留对比度和高光层次，呈现经典老电影质感，而不是简单地给画面蒙上一层棕色。"
+
+[[param]]
+key = "tone"
+label = "色调"
+min = 0
+max = 100
+default = 80
+step = 1
+unit = "%"
+
+[[param]]
+key = "contrast"
+label = "对比度"
+min = 0
+max = 100
+default = 30
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

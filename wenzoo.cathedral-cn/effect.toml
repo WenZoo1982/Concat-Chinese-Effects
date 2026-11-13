@@ -1,0 +1,23 @@
+[effect]
+id = "wenzoo.cathedral-cn"
+name = "大教堂混响"
+kind = "audio"
+category = "空间"
+order = 34
+intensity = "size"
+description = "营造石质建筑般开阔而高耸的空间感，带来延迟较长的反射声。"
+
+[[param]]
+key = "size"
+label = "空间大小"
+min = 0
+max = 100
+default = 55
+step = 1
+unit = "%"
+
+[ffmpeg]
+let = [
+  "scale = 0.5 + (size / 100) * 1.5",
+]
+chain = "aecho=0.8:0.9:{round(120 * scale)}|{round(230 * scale)}|{round(390 * scale)}|{round(600 * scale)}:0.6|0.5|0.4|0.3"

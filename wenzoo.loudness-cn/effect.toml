@@ -1,0 +1,20 @@
+[effect]
+id = "wenzoo.loudness-cn"
+name = "响度标准化"
+kind = "audio"
+category = "清理"
+order = 40
+intensity = "target"
+description = "将整个片段调整到统一响度，符合广播和各类内容平台的响度要求。"
+
+[[param]]
+key = "target"
+label = "目标响度"
+min = -30
+max = -12
+default = -23
+step = 1
+unit = "dB"
+
+[ffmpeg]
+chain = "loudnorm=I={fixed(target, 1)}:TP=-1.5:LRA=11"

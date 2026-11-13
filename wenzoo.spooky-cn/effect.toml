@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.spooky-cn"
+name = "惊悚氛围"
+kind = "filter"
+category = "风格化"
+order = 54
+intensity = "dread"
+description = "降低色彩饱和度，加入青绿色偏色，强化暗部对比并加重暗角，营造惊悚氛围。"
+
+[[param]]
+key = "dread"
+label = "惊悚强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

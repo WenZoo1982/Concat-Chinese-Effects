@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.natural-cn"
+name = "自然人像"
+kind = "filter"
+category = "人像"
+order = 55
+description = "轻柔、真实的画面提亮：只加入几乎察觉不到的暖意，不改变自然肤色。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

@@ -1,0 +1,27 @@
+format = 2
+
+[effect]
+id = "wenzoo.exposure-cn"
+name = "曝光"
+kind = "effect"
+category = "色彩"
+order = 10
+intensity = "stops"
+description = "以曝光档位调整画面明暗，模拟镜头曝光变化，同时保留高光细节。"
+
+[[param]]
+key = "stops"
+label = "曝光"
+min = -4
+max = 4
+default = 0
+step = 0.05
+unit = "EV"
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+
+# At its default the picture is as shot; the card shows a stop up.
+[card]
+params = { stops = 1 }

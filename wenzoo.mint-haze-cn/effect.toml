@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.mint-haze-cn"
+name = "薄荷朦胧"
+kind = "filter"
+category = "风格化"
+order = 53
+intensity = "amount"
+description = "在中间调和白色中融入柔和的绿色，降低整体饱和度并加入轻微哑光质感。呈现时尚清新的色调，同时保持人物面部自然。"
+
+[[param]]
+key = "amount"
+label = "强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

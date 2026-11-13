@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.pink-fuzz-cn"
+name = "粉色柔雾"
+kind = "filter"
+category = "风格化"
+order = 50
+intensity = "haze"
+description = "降低对比度，在高光中融入粉色与薰衣草紫，并叠加柔和光晕，营造梦幻朦胧的氛围。"
+
+[[param]]
+key = "haze"
+label = "朦胧强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "blush"
+label = "粉色程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

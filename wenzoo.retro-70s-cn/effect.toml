@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.retro-70s-cn"
+name = "七十年代复古"
+kind = "filter"
+category = "胶片"
+order = 63
+description = "浓郁的暖色褪色效果，带有泛黄、日晒褪色般的色彩倾向。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

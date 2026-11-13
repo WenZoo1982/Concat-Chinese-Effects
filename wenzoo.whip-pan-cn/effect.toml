@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.whip-pan-cn"
+name = "甩镜转场"
+kind = "transition"
+category = "擦除"
+order = 14
+description = "摄影机以极快速度横向甩动，使画面产生强烈拖影，并在运动结束时切换到下一个镜头。"
+
+[[param]]
+key = "speed"
+label = "速度"
+unit = "%"
+min = 20
+max = 100
+step = 1
+default = 80
+
+[transition]
+fallback = "slideleft"
+xfade = "slideleft"
+entry = "effect.wgsl"

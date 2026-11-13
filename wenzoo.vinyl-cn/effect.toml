@@ -1,0 +1,19 @@
+[effect]
+id = "wenzoo.vinyl-cn"
+name = "黑胶唱片音效"
+kind = "audio"
+category = "音色"
+order = 24
+intensity = "warmth"
+description = "模拟温暖的复古黑胶唱机音色，并限制音频频段，呈现老式唱片的听感。"
+
+[[param]]
+key = "warmth"
+label = "温暖程度"
+min = 0
+max = 10
+default = 5
+step = 0.5
+
+[ffmpeg]
+chain = "highpass=f=250,lowpass=f=5000,equalizer=f=1200:t=q:w=1.5:g={fixed(2 + warmth * 0.4, 2)},alimiter=limit=0.95"

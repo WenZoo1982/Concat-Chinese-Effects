@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.autumn-cn"
+name = "秋日"
+kind = "filter"
+category = "风景"
+order = 58
+description = "将绿色调向琥珀色，为画面覆上一层秋日暖光。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

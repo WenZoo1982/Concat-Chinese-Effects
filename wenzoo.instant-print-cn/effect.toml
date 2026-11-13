@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.instant-print-cn"
+name = "拍立得"
+kind = "filter"
+category = "复古"
+order = 41
+intensity = "fade"
+description = "模拟即时成像照片：加入奶油色哑光质感、温暖高光、渗入阴影的青色，并让画面边缘略微柔化。"
+
+[[param]]
+key = "fade"
+label = "褪色"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

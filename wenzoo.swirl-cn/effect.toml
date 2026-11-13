@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.swirl-cn"
+name = "漩涡转场"
+kind = "transition"
+category = "旋转"
+order = 7
+shelves = ["扭曲与故障"]
+description = "两个镜头围绕画面中心像水流般旋转扭曲，下一个镜头从漩涡中逐渐展开。"
+
+[[param]]
+key = "twist"
+label = "扭曲强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 70
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

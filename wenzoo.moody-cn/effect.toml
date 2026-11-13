@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.moody-cn"
+name = "情绪电影感"
+kind = "filter"
+category = "电影感"
+order = 31
+intensity = "depth"
+description = "通过胶片曲线压深黑位、降低饱和度，在中间调加入青铜色，在阴影中融入冷色，并适度压暗画面边缘。"
+
+[[param]]
+key = "depth"
+label = "暗部深度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

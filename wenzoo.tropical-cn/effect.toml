@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.tropical-cn"
+name = "热带风情"
+kind = "filter"
+category = "风景"
+order = 60
+description = "增强整体饱和度与亮度，并将水面色彩调整为鲜明的青绿色。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

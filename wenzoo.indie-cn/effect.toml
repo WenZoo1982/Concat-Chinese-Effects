@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.indie-cn"
+name = "独立电影"
+kind = "filter"
+category = "电影感"
+order = 36
+intensity = "amount"
+description = "在中间调中融入低饱和的青绿色，配合柔和的胶片曲线，并仅在人物面部保留暖色，呈现安静克制的独立电影影调。"
+
+[[param]]
+key = "amount"
+label = "强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

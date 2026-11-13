@@ -1,0 +1,41 @@
+format = 2
+
+[effect]
+id = "wenzoo.curves-cn"
+name = "曲线调色"
+kind = "effect"
+category = "色彩"
+order = 15
+description = "通过自定义曲线调整画面色阶：先调整仅影响亮度的明度曲线，再分别调整红、绿、蓝通道。"
+
+[[param]]
+key = "luma"
+group = "曲线"
+label = "明度"
+type = "curve"
+
+[[param]]
+key = "red"
+group = "曲线"
+label = "红色"
+type = "curve"
+
+[[param]]
+key = "green"
+group = "曲线"
+label = "绿色"
+type = "curve"
+
+[[param]]
+key = "blue"
+group = "曲线"
+label = "蓝色"
+type = "curve"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"
+
+# At rest the picture is as shot; the card shows a gentle S.
+[card]
+params = { "luma.0.x" = 0.0, "luma.0.y" = 0.0, "luma.1.x" = 0.25, "luma.1.y" = 0.18, "luma.2.x" = 0.75, "luma.2.y" = 0.84, "luma.3.x" = 1.0, "luma.3.y" = 1.0 }

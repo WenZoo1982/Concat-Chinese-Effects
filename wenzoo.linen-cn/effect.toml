@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.linen-cn"
+name = "亚麻暖调"
+kind = "filter"
+category = "日常"
+order = 18
+intensity = "matte"
+description = "与“泛白”滤镜相近的温暖版本：营造柔和哑光质感，在白色中加入奶油色，在中间调融入少许金色，适合室内场景和清晨光线。"
+
+[[param]]
+key = "matte"
+label = "哑光强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

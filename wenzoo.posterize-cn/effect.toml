@@ -1,0 +1,24 @@
+format = 2
+
+[effect]
+id = "wenzoo.posterize-cn"
+name = "色调分离"
+version = 2
+kind = "effect"
+category = "风格化"
+order = 43
+intensity = "levels"
+description = "将画面转换为层次分明的色块，呈现丝网印刷般的视觉效果。"
+
+[[param]]
+key = "levels"
+label = "色阶数量"
+type = "int"
+min = 2
+max = 8
+default = 4
+step = 1
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

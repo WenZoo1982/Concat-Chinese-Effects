@@ -1,0 +1,28 @@
+format = 2
+
+[effect]
+id = "wenzoo.saturation-cn"
+name = "饱和度"
+kind = "effect"
+category = "色彩"
+order = 12
+intensity = "amount"
+description = "根据各像素自身的亮度增强或降低色彩饱和度，让画面色彩更浓郁或更灰淡。"
+
+[[param]]
+key = "amount"
+label = "饱和度"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"
+
+# At its default the picture is as shot; the card shows a push.
+[card]
+params = { amount = 50 }

@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.blush-cn"
+name = "蜜桃柔肤"
+kind = "filter"
+category = "人像"
+order = 20
+intensity = "glow"
+description = "让肤色呈现温暖的蜜桃色调，并柔化画面、提亮阴影以减淡面部线条，同时降低对比度。适合人像和口播画面，建议以半强度使用。"
+
+[[param]]
+key = "glow"
+label = "柔光"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[[param]]
+key = "softness"
+label = "柔化"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

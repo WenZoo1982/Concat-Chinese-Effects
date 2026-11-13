@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.wet-street-cn"
+name = "雨后街景"
+kind = "filter"
+category = "电影感"
+order = 38
+intensity = "haze"
+description = "营造冷色、朦胧且低饱和的氛围，同时提亮湿润路面的反射并增强光晕，适合傍晚时分的街头漫步画面。"
+
+[[param]]
+key = "haze"
+label = "朦胧强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "chill"
+label = "冷色程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

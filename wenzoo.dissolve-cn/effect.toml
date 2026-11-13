@@ -1,0 +1,14 @@
+format = 2
+
+[effect]
+id = "wenzoo.dissolve-cn"
+name = "交叉溶解"
+kind = "transition"
+category = "基础"
+order = 0
+description = "前一个镜头平滑地渐变为下一个镜头。"
+
+[transition]
+fallback = "cross-fade"
+xfade = "fade"
+entry = "effect.wgsl"

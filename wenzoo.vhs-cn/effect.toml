@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.vhs-cn"
+name = "录像带故障"
+kind = "filter"
+category = "复古"
+order = 44
+intensity = "bleed"
+description = "模拟 VHS 录像带质感：色彩横向溢出、扫描线、画面柔化、磁带噪声和过高饱和度，并加入磁头磨损造成的轻微垂直拖影。"
+
+[[param]]
+key = "bleed"
+label = "色彩溢出"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "lines"
+label = "扫描线"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

@@ -1,0 +1,24 @@
+format = 2
+
+[effect]
+id = "wenzoo.pixelate-cn"
+name = "像素化"
+version = 2
+kind = "effect"
+category = "扭曲"
+order = 50
+intensity = "size"
+description = "将画面转换为由大块方形像素组成的效果。"
+
+[[param]]
+key = "size"
+label = "像素大小"
+type = "int"
+min = 2
+max = 64
+default = 16
+step = 1
+unit = "px"
+
+[wgsl]
+entry = "effect.wgsl"

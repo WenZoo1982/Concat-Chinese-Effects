@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.aquamarine-cn"
+name = "海蓝宝石"
+kind = "filter"
+category = "日常"
+order = 16
+intensity = "water"
+description = "将水面和天空调成明亮的海蓝色，同时保留沙滩和肤色的温暖与自然，适合海滨画面。"
+
+[[param]]
+key = "water"
+label = "水面"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "brightness"
+label = "亮度"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

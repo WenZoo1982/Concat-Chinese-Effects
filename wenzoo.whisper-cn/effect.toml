@@ -1,0 +1,19 @@
+[effect]
+id = "wenzoo.whisper-cn"
+name = "气声人声"
+kind = "audio"
+category = "人声"
+order = 16
+intensity = "air"
+description = "营造轻柔、带有气息感的人声音色，削弱低频并增强人声临场感。"
+
+[[param]]
+key = "air"
+label = "空气感"
+min = 1
+max = 10
+default = 5
+step = 0.5
+
+[ffmpeg]
+chain = "highpass=f=500,equalizer=f=3200:t=q:w=1.4:g={fixed(2 + air * 0.6, 2)},equalizer=f=7500:t=q:w=1.2:g={fixed(1 + air * 0.5, 2)},alimiter=limit=0.92"

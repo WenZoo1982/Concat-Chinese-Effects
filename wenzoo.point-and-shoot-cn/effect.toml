@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.point-and-shoot-cn"
+name = "数码卡片机"
+kind = "filter"
+category = "复古"
+order = 45
+intensity = "flash"
+description = "还原 2000 年代数码卡片机风格：强烈闪光灯、过曝高光、鲜艳色彩、偏冷青色调、过度锐化，以及传感器噪点。"
+
+[[param]]
+key = "flash"
+label = "闪光效果"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "noise"
+label = "噪点"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

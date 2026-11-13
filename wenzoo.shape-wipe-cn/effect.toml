@@ -1,0 +1,35 @@
+format = 2
+
+[effect]
+id = "wenzoo.shape-wipe-cn"
+name = "形状擦除"
+kind = "transition"
+category = "擦除"
+order = 12
+description = "下一个镜头通过圆形、爱心或星形窗口逐渐显现，窗口从画面中心扩大，直至覆盖整个画面。"
+
+[[param]]
+key = "shape"
+label = "形状"
+type = "enum"
+values = [0, 1, 2]
+labels = ["圆形", "爱心", "星形"]
+default = 0
+min = 0
+max = 2
+
+[[param]]
+key = "softness"
+label = "边缘柔化"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 15
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"
+
+[card]
+progress = 0.55

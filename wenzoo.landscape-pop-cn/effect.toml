@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.landscape-pop-cn"
+name = "鲜艳风景"
+kind = "filter"
+category = "风景"
+order = 57
+description = "增强绿色与蓝色的浓郁程度，让旅行风景画面更鲜明、更有冲击力。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

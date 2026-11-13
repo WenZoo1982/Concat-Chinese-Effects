@@ -1,0 +1,219 @@
+format = 2
+
+[effect]
+id = "wenzoo.adjust-cn"
+name = "画面调整"
+kind = "filter"
+category = "调整"
+order = 0
+intensity = "exposure"
+description = "用于手动调整画面：曝光、色温、色调、饱和度、明暗、锐度、褪色、暗角、色轮与曲线。"
+
+# Three groups, in the order the panel lists them. Colour: temperature in
+# kelvin with 6500 the picture as shot, tint green to magenta, saturation
+# as a signed percent. Lightness: exposure in stops of light, then
+# brightness, contrast, highlights, shadows, whites and blacks as signed
+# percents; the last four lift or crush their end of the curve, highlights
+# and shadows the broad upper and lower halves, whites and blacks the
+# narrow extremes. Effects: sharpen, fade and vignette add from zero.
+# Wheels: lift, gamma and gain, each a hue to push towards and a master.
+# Curves: luma, then red, green and blue.
+#
+# 2: drawn in light. Exposure is in true stops of light, where it scaled
+# the display encoding, some 2.4 stops an EV; the rest reads as it did at
+# a moderate setting, without clipping.
+version = 2
+
+[[param]]
+key = "temperature"
+group = "颜色"
+label = "色温"
+min = 2000
+max = 11000
+default = 6500
+step = 50
+unit = "K"
+
+[[param]]
+key = "tint"
+group = "颜色"
+label = "色调"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "saturation"
+group = "颜色"
+label = "饱和度"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "exposure"
+group = "明暗"
+label = "曝光"
+min = -3
+max = 3
+default = 0
+step = 0.05
+unit = "EV"
+
+[[param]]
+key = "brightness"
+group = "明暗"
+label = "亮度"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "contrast"
+group = "明暗"
+label = "对比度"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "highlights"
+group = "明暗"
+label = "高光"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "shadows"
+group = "明暗"
+label = "阴影"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "whites"
+group = "明暗"
+label = "白色"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "blacks"
+group = "明暗"
+label = "黑色"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "sharpen"
+group = "效果"
+label = "锐化"
+min = 0
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "fade"
+group = "效果"
+label = "褪色"
+min = 0
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "vignette"
+group = "效果"
+label = "暗角"
+min = 0
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[[param]]
+key = "lift"
+group = "色轮"
+label = "阴影提升"
+type = "wheel"
+min = -1
+max = 1
+default = 0
+step = 0.01
+animate = true
+
+[[param]]
+key = "gamma"
+group = "色轮"
+label = "伽马"
+type = "wheel"
+min = -1
+max = 1
+default = 0
+step = 0.01
+animate = true
+
+[[param]]
+key = "gain"
+group = "色轮"
+label = "增益"
+type = "wheel"
+min = -1
+max = 1
+default = 0
+step = 0.01
+animate = true
+
+[[param]]
+key = "luma"
+group = "曲线"
+label = "明度"
+type = "curve"
+
+[[param]]
+key = "red"
+group = "曲线"
+label = "红色"
+type = "curve"
+
+[[param]]
+key = "green"
+group = "曲线"
+label = "绿色"
+type = "curve"
+
+[[param]]
+key = "blue"
+group = "曲线"
+label = "蓝色"
+type = "curve"
+
+[wgsl]
+entry = "effect.wgsl"
+
+# At its defaults the panel changes nothing; the card shows it at work.
+[card]
+params = { contrast = 30, saturation = 30 }

@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.classic-chrome-cn"
+name = "经典铬色"
+kind = "filter"
+category = "胶片"
+order = 61
+description = "压低高光、加深同时保留层次的阴影，呈现经典彩色负片克制而沉稳的影调。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

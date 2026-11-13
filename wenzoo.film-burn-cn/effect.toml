@@ -1,0 +1,27 @@
+format = 2
+
+[effect]
+id = "wenzoo.film-burn-cn"
+name = "胶片灼烧"
+kind = "transition"
+category = "溶解"
+order = 2
+description = "通过温暖的过曝闪光穿透画面切换，营造胶片灼烧效果。"
+
+[[param]]
+key = "heat"
+label = "灼烧强度"
+min = 0
+max = 100
+default = 70
+step = 1
+unit = "%"
+
+[transition]
+entry = "effect.wgsl"
+xfade = "fadewhite"
+fallback = "cross-fade"
+
+# By the usual point of the cut the flash has burned the frame white.
+[card]
+progress = 0.15

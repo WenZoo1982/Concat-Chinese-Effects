@@ -1,0 +1,40 @@
+format = 2
+
+[effect]
+id = "wenzoo.remove-black-cn"
+name = "移除黑色背景"
+kind = "effect"
+category = "抠像"
+order = 60
+intensity = "strength"
+description = "移除黑色背景，同时保留火焰、火花、烟雾、漏光或黑底 Logo 的发光部分，使其成为透明光效叠加在下方画面上；导出时也可保留透明通道，避免出现暗色边缘。"
+
+# The level of the picture taken for black, so a lifted black, grain and a
+# compressed stream's noise go with it.
+[[param]]
+key = "threshold"
+label = "黑场阈值"
+min = 0
+max = 50
+default = 4
+step = 1
+unit = "%"
+
+# How solid what stays is: at 100 % a glow covers what is beneath by as
+# much as it is bright, the way light adds to light; more makes the dim
+# parts more solid.
+[[param]]
+key = "strength"
+label = "保留强度"
+min = 50
+max = 400
+default = 100
+step = 5
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+
+# The still before a black backdrop, for the key to take out.
+[card]
+screen = "#000000"

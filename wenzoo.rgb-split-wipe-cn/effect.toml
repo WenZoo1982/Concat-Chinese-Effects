@@ -1,0 +1,22 @@
+format = 2
+
+[effect]
+id = "wenzoo.rgb-split-wipe-cn"
+name = "RGB 色彩分离擦除"
+kind = "transition"
+category = "故障"
+order = 9
+description = "红、绿、蓝三个颜色通道在转场过程中分别错位，并在不同时间切换到下一个镜头，最后重新合为一体。"
+
+[[param]]
+key = "spread"
+label = "分离幅度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 60
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

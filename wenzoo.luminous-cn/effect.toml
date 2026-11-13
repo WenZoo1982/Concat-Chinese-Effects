@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.luminous-cn"
+name = "人像焕亮"
+kind = "filter"
+category = "人像"
+order = 21
+intensity = "brighten"
+description = "提亮并均匀面部肤色：抬高肤色亮度，柔和控制红色，保持中性色彩平衡，同时尽量不改变画面其他区域。"
+
+[[param]]
+key = "brighten"
+label = "提亮"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[[param]]
+key = "even"
+label = "肤色均匀度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

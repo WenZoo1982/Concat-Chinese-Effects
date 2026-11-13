@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.light-leak-transition-cn"
+name = "暖光漏光"
+kind = "transition"
+category = "光效"
+order = 13
+description = "一片温暖的光线横扫画面，并在光线经过后显露下一个镜头。"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 70
+
+[transition]
+fallback = "cross-fade"
+xfade = "fadewhite"
+entry = "effect.wgsl"

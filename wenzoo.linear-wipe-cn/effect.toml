@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.linear-wipe-cn"
+name = "直线擦除"
+kind = "transition"
+category = "擦除"
+order = 10
+description = "一条直线横穿画面，并在经过后逐渐显露下一个镜头。"
+
+[[param]]
+key = "direction"
+label = "方向"
+type = "enum"
+values = [0, 1, 2, 3]
+labels = ["从左向右", "从右向左", "从上向下", "从下向上"]
+default = 0
+min = 0
+max = 3
+
+[[param]]
+key = "softness"
+label = "边缘柔化"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 20
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

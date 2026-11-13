@@ -1,0 +1,62 @@
+format = 2
+
+[effect]
+id = "wenzoo.impact-cn"
+name = "重击震动"
+kind = "effect"
+category = "抖动"
+order = 5
+intensity = "amount"
+description = "在片段或图层开始时产生一次强烈冲击：画面猛然震动、快速推近并逐渐回弹。适合卡在音乐节拍上。"
+
+[[param]]
+key = "amount"
+label = "强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 60
+
+[[param]]
+key = "length"
+label = "持续时间"
+unit = "s"
+min = 0.1
+max = 2
+step = 0.05
+default = 0.45
+
+[[param]]
+key = "punch"
+label = "缩放冲击"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 40
+
+[[param]]
+key = "direction"
+label = "方向"
+type = "enum"
+values = [0, 1, 2]
+labels = ["任意方向", "左右", "上下"]
+default = 0
+min = 0
+max = 2
+
+[[param]]
+key = "blur"
+label = "动态模糊"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 60
+
+[wgsl]
+entry = "effect.wgsl"
+
+[card]
+moment = 0.06

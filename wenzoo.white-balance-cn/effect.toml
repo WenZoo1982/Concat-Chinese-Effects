@@ -1,0 +1,37 @@
+format = 2
+
+[effect]
+id = "wenzoo.white-balance-cn"
+name = "白平衡"
+kind = "effect"
+category = "色彩"
+order = 13
+intensity = "temperature"
+description = "调整画面的色温与色调，模拟光线变化时人眼对暖色、冷色、洋红色或绿色的适应效果。"
+
+[[param]]
+key = "temperature"
+label = "色温"
+min = 2000
+max = 11000
+default = 6500
+step = 50
+unit = "K"
+animate = true
+
+[[param]]
+key = "tint"
+label = "色调"
+min = -100
+max = 100
+default = 0
+step = 1
+unit = "%"
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+
+# At its defaults the picture is as shot; the card shows a warm light.
+[card]
+params = { temperature = 4500 }

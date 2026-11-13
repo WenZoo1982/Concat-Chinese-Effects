@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.window-seat-cn"
+name = "窗边电影感"
+kind = "filter"
+category = "电影感"
+order = 35
+intensity = "haze"
+description = "柔和的电影影调：抬高黑位，让光线呈现温暖光晕，使阴影略带冷色，同时保持肤色自然，仿佛在窗边讲述一个故事。"
+
+[[param]]
+key = "haze"
+label = "朦胧强度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

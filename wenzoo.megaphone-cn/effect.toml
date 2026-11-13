@@ -1,0 +1,19 @@
+[effect]
+id = "wenzoo.megaphone-cn"
+name = "扩音器"
+kind = "audio"
+category = "人声"
+order = 15
+intensity = "drive"
+description = "模拟手持扩音器的刺耳音色，突出中频，让声音更有穿透力。"
+
+[[param]]
+key = "drive"
+label = "驱动强度"
+min = 1
+max = 10
+default = 5
+step = 0.5
+
+[ffmpeg]
+chain = "highpass=f=550,lowpass=f=2800,equalizer=f=1600:t=q:w=2.0:g={fixed(3 + drive * 0.8, 2)},alimiter=limit=0.88"

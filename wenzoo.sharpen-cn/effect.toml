@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.sharpen-cn"
+name = "锐化"
+version = 2
+kind = "effect"
+category = "基础"
+order = 13
+intensity = "amount"
+description = "增强画面边缘细节，使图像更加清晰锐利。"
+
+[[param]]
+key = "amount"
+label = "锐化强度"
+min = 0.2
+max = 3
+default = 1
+step = 0.05
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

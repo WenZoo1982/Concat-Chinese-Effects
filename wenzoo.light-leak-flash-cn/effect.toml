@@ -1,0 +1,27 @@
+format = 2
+
+[effect]
+id = "wenzoo.light-leak-flash-cn"
+name = "漏光闪白"
+kind = "transition"
+category = "光效"
+order = 16
+description = "以自然有机的胶片过曝闪光连接两个镜头，呈现胶片灼烧般的切换效果。"
+
+[[param]]
+key = "strength"
+label = "强度"
+min = 0
+max = 100
+default = 80
+step = 1
+unit = "%"
+
+[transition]
+entry = "effect.wgsl"
+xfade = "fadewhite"
+fallback = "cross-fade"
+
+# By the usual point of the cut the flash has burned the frame white.
+[card]
+progress = 0.15

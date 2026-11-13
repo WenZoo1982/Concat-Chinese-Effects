@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.golden-hour-cn"
+name = "黄金时刻"
+kind = "filter"
+category = "日常"
+order = 14
+intensity = "glow"
+description = "模拟日落前的温暖光线：保持画面明亮，在高光中加入橙色，在阴影中融入少量洋红，并轻微抬高黑位。"
+
+[[param]]
+key = "glow"
+label = "光晕强度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[[param]]
+key = "warmth"
+label = "色温"
+min = 3500
+max = 6500
+default = 4600
+step = 50
+unit = "K"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

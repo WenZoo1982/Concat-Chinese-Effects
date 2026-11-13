@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.bleach-bypass-cn"
+name = "漂白旁路"
+kind = "filter"
+category = "电影感"
+order = 51
+description = "模拟胶片漂白旁路工艺：降低色彩饱和度，并显著增强画面对比度。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

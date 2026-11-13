@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.vignette-cn"
+name = "暗角"
+version = 2
+kind = "effect"
+category = "风格化"
+order = 40
+intensity = "strength"
+description = "压暗画面四角，将观众视线引导至画面中央。"
+
+[[param]]
+key = "strength"
+label = "暗角强度"
+min = 10
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"

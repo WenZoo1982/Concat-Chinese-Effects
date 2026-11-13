@@ -1,0 +1,14 @@
+format = 2
+
+[effect]
+id = "wenzoo.clock-wipe-cn"
+name = "时钟擦除"
+kind = "transition"
+category = "擦除"
+order = 15
+description = "从画面顶部的十二点方向开始，像时钟指针一样扫过整个画面，并在扫过后显露下一段镜头。"
+
+[transition]
+fallback = "cross-fade"
+xfade = "radial"
+entry = "effect.wgsl"

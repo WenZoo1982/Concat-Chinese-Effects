@@ -1,0 +1,61 @@
+format = 2
+
+[effect]
+id = "wenzoo.beat-shake-cn"
+name = "节拍抖动"
+kind = "effect"
+category = "抖动"
+order = 6
+intensity = "amount"
+description = "按照设定的节奏，在每个节拍触发一次方向各异的画面冲击，从片段或图层开始处生效。"
+
+[[param]]
+key = "bpm"
+label = "节拍速度"
+unit = "BPM"
+min = 40
+max = 240
+step = 1
+default = 120
+
+[[param]]
+key = "amount"
+label = "强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 50
+
+[[param]]
+key = "length"
+label = "冲击时长"
+unit = "%"
+min = 10
+max = 100
+step = 1
+default = 60
+
+[[param]]
+key = "punch"
+label = "缩放冲击"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 30
+
+[[param]]
+key = "blur"
+label = "动态模糊"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 50
+
+[wgsl]
+entry = "effect.wgsl"
+
+[card]
+moment = 0.04

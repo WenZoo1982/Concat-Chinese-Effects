@@ -1,0 +1,40 @@
+format = 2
+
+[effect]
+id = "wenzoo.prism-shake-cn"
+name = "棱镜抖动"
+kind = "effect"
+category = "抖动"
+order = 7
+intensity = "amount"
+description = "红、绿、蓝三个颜色通道分别抖动，使画面边缘产生彩色分离效果，并伴随整体震颤。"
+
+[[param]]
+key = "amount"
+label = "强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 50
+
+[[param]]
+key = "speed"
+label = "速度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 50
+
+[[param]]
+key = "split"
+label = "色彩分离"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 60
+
+[wgsl]
+entry = "effect.wgsl"

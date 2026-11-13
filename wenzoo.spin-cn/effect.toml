@@ -1,0 +1,21 @@
+format = 2
+
+[effect]
+id = "wenzoo.spin-cn"
+name = "旋转转场"
+kind = "transition"
+category = "旋转"
+order = 6
+description = "画面旋转并在转动过程中逐渐模糊，下一个镜头从旋转中展开，最终平稳停下。"
+
+[[param]]
+key = "turns"
+label = "旋转圈数"
+min = 0.5
+max = 2
+step = 0.25
+default = 1
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

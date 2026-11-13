@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.sci-fi-cn"
+name = "科幻冷调"
+kind = "filter"
+category = "电影感"
+order = 53
+description = "呈现冷峻、洁净的钢蓝与青绿色调，同时适度降低饱和度，营造科幻视觉氛围。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

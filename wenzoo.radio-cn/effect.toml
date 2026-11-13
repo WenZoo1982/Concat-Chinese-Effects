@@ -1,0 +1,23 @@
+[effect]
+id = "wenzoo.radio-cn"
+name = "收音机音效"
+kind = "audio"
+category = "音色"
+order = 24
+intensity = "noise"
+description = "模拟小型收音机的声音：缩窄频段，并加入少量失真颗粒感。"
+
+[[param]]
+key = "noise"
+label = "噪声强度"
+min = 0
+max = 100
+default = 30
+step = 1
+unit = "%"
+
+[ffmpeg]
+let = [
+  "bits = 16 - (noise / 100) * 12",
+]
+chain = "highpass=f=300,lowpass=f=3400,acrusher=bits={round(bits)}:mode=log:mix=0.6,alimiter=limit=0.9"

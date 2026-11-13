@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.glitch-warp-cn"
+name = "故障扭曲"
+kind = "transition"
+category = "故障"
+order = 17
+description = "通过彩色切片撕裂和数字像素位移实现故障风格转场。"
+
+[[param]]
+key = "amount"
+label = "故障强度"
+min = 0
+max = 100
+default = 75
+step = 1
+unit = "%"
+
+[transition]
+entry = "effect.wgsl"
+xfade = "pixelize"
+fallback = "cross-fade"

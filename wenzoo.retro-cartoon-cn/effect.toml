@@ -1,0 +1,31 @@
+format = 2
+
+[effect]
+id = "wenzoo.retro-cartoon-cn"
+name = "复古漫画"
+kind = "filter"
+category = "风格化"
+order = 55
+intensity = "ink"
+description = "将画面转换为色彩分明的平涂色块，并勾勒墨线边缘，呈现印刷漫画的视觉效果。"
+
+[[param]]
+key = "levels"
+label = "色阶数量"
+min = 2
+max = 8
+default = 5
+step = 1
+
+[[param]]
+key = "ink"
+label = "墨线强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

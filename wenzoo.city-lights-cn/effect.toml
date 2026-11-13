@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.city-lights-cn"
+name = "城市霓虹"
+kind = "filter"
+category = "风格化"
+order = 52
+intensity = "lights"
+description = "适用于夜景城市画面：增强灯光与招牌的鲜艳度和光晕效果，同时保持黑位深邃偏冷，并让人物面部保持自然。"
+
+[[param]]
+key = "lights"
+label = "灯光强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "depth"
+label = "暗部深度"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

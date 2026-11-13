@@ -1,0 +1,25 @@
+format = 2
+
+[effect]
+id = "wenzoo.halftone-cn"
+name = "半色调网点"
+version = 2
+kind = "effect"
+category = "复古"
+order = 76
+intensity = "size"
+description = "将画面转换为由黑白圆点组成的网格图案。"
+
+[[param]]
+key = "size"
+label = "网点大小"
+type = "int"
+min = 4
+max = 40
+default = 6
+step = 1
+unit = "px"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

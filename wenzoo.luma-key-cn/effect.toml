@@ -1,0 +1,45 @@
+format = 2
+
+[effect]
+id = "wenzoo.luma-key-cn"
+name = "亮度抠像"
+kind = "effect"
+category = "抠像"
+order = 59
+intensity = "threshold"
+description = "根据画面亮度移除较暗区域，适合处理黑色背景上的火焰、烟雾或火花；反转后也可以移除较亮区域。"
+
+[[param]]
+key = "threshold"
+label = "阈值"
+min = 0
+max = 100
+default = 10
+step = 1
+unit = "%"
+
+[[param]]
+key = "softness"
+label = "边缘柔化"
+min = 0
+max = 50
+default = 10
+step = 1
+unit = "%"
+
+[[param]]
+key = "invert"
+label = "反转"
+type = "bool"
+min = 0
+max = 1
+default = 0
+step = 1
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"
+
+# The still's shadows taken out, for the card.
+[card]
+params = { threshold = 35 }

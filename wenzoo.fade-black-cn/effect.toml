@@ -1,0 +1,14 @@
+format = 2
+
+[effect]
+id = "wenzoo.fade-black-cn"
+name = "淡出至黑"
+kind = "transition"
+category = "基础"
+order = 1
+description = "前一个镜头逐渐淡出至黑屏，随后下一个镜头从黑屏中逐渐显现。"
+
+[transition]
+entry = "effect.wgsl"
+xfade = "fadeblack"
+fallback = "cross-fade"

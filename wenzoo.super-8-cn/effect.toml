@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.super-8-cn"
+name = "超八毫米胶片"
+kind = "filter"
+category = "胶片"
+order = 62
+description = "呈现褪色、温暖并带有颗粒感的影像，模拟老式家用电影胶片经过放映机播放的效果。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

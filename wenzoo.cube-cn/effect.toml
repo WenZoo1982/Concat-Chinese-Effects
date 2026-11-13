@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.cube-cn"
+name = "立方体翻转"
+kind = "transition"
+category = "旋转"
+order = 14
+description = "将前后两个镜头呈现在立方体相邻的两个侧面上，立方体旋转四分之一圈完成切换，转离视线的一面逐渐变暗。"
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

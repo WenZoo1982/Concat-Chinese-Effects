@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.cyberpunk-cn"
+name = "赛博朋克"
+kind = "filter"
+category = "电影感"
+order = 52
+description = "在阴影中加入洋红色，在高光中加入青色，并强化整体效果，营造鲜明耀眼的霓虹风格。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

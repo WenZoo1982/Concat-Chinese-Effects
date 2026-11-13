@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.iris-cn"
+name = "圆形开幕"
+kind = "transition"
+category = "擦除"
+order = 11
+description = "圆形开口从画面中心逐渐扩大，直到下一个镜头铺满整个画面。"
+
+[[param]]
+key = "softness"
+label = "边缘柔化"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 15
+
+[transition]
+fallback = "cross-fade"
+xfade = "circleopen"
+entry = "effect.wgsl"

@@ -1,0 +1,23 @@
+[effect]
+id = "wenzoo.room-cn"
+name = "房间混响"
+kind = "audio"
+category = "空间"
+order = 31
+intensity = "size"
+description = "模拟房间内声音到达墙面后产生的早期反射。"
+
+[[param]]
+key = "size"
+label = "空间大小"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[ffmpeg]
+let = [
+  "scale = 0.4 + (size / 100) * 1.6",
+]
+chain = "aecho=0.8:0.88:{round(23 * scale)}|{round(41 * scale)}|{round(67 * scale)}|{round(97 * scale)}:0.320|0.240|0.170|0.110"

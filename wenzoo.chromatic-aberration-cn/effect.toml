@@ -1,0 +1,24 @@
+format = 2
+
+[effect]
+id = "wenzoo.chromatic-aberration-cn"
+name = "色差"
+version = 2
+kind = "effect"
+category = "扭曲"
+order = 54
+intensity = "shift"
+description = "将红色和蓝色通道向画面边缘错开，模拟廉价镜头产生的彩色边缘。"
+
+[[param]]
+key = "shift"
+label = "偏移量"
+type = "int"
+min = 1
+max = 24
+default = 4
+step = 1
+unit = "px"
+
+[wgsl]
+entry = "effect.wgsl"

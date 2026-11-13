@@ -1,0 +1,59 @@
+format = 2
+
+[effect]
+id = "wenzoo.corona-cn"
+name = "冷色光冠"
+version = 1
+kind = "effect"
+category = "胶片"
+order = 151
+intensity = "amount"
+description = "通过黄金角螺旋模糊，从过曝高光中提取冷蓝白色光冠效果。该效果从零独立构建，并非移植自内置胶片晕光效果。"
+
+[[param]]
+key = "threshold"
+label = "高光阈值"
+min = 20
+max = 95
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "radius"
+label = "扩散半径"
+min = 4
+max = 60
+default = 18
+step = 1
+unit = "%"
+
+[[param]]
+key = "amount"
+label = "强度"
+min = 0
+max = 100
+default = 55
+step = 1
+unit = "%"
+
+[[param]]
+key = "cool"
+label = "冷色程度"
+min = 0
+max = 100
+default = 70
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+
+# The corona is one blur pass, half the layer's pixels on each axis,
+# read back by the final pass.
+[[wgsl.pass]]
+target = "bloom"
+shrink = ["2", "2"]
+
+[card]
+params = { threshold = 45, amount = 80 }

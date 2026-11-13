@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.walnut-cn"
+name = "胡桃暖调"
+kind = "filter"
+category = "日常"
+order = 19
+intensity = "warmth"
+description = "营造咖啡馆般的色调：在中间调融入温暖的棕色，将绿色柔和地转为橄榄色，并降低对比度，适合木质环境与人物肤色，呈现舒适温馨的氛围。"
+
+[[param]]
+key = "warmth"
+label = "暖色程度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "soften"
+label = "柔化"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

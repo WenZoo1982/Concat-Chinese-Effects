@@ -1,0 +1,23 @@
+format = 2
+
+[effect]
+id = "wenzoo.clean-cn"
+name = "自然清透"
+kind = "filter"
+category = "日常"
+order = 12
+intensity = "amount"
+description = "轻微而自然的画面优化：保持中性色调，柔和调整曲线并略微增加色彩，同时压低红色，让肤色更加均匀，尤其适合人物口播画面。"
+
+[[param]]
+key = "amount"
+label = "强度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

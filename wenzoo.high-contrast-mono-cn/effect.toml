@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.high-contrast-mono-cn"
+name = "高反差黑白"
+kind = "filter"
+category = "黑白"
+order = 64
+description = "强烈的黑白影调：压深黑色、提亮白色，减少中间灰阶，呈现鲜明的高反差效果。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

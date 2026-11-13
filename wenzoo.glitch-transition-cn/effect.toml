@@ -1,0 +1,22 @@
+format = 2
+
+[effect]
+id = "wenzoo.glitch-transition-cn"
+name = "故障闪切"
+kind = "transition"
+category = "故障"
+order = 8
+description = "画面分裂成撕裂的条带，横向跳动并在两个镜头之间闪烁，直到下一个镜头稳定显示。"
+
+[[param]]
+key = "amount"
+label = "故障强度"
+unit = "%"
+min = 0
+max = 100
+step = 1
+default = 70
+
+[transition]
+fallback = "cross-fade"
+entry = "effect.wgsl"

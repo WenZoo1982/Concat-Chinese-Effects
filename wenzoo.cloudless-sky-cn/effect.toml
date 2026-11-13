@@ -1,0 +1,37 @@
+format = 2
+
+[effect]
+id = "wenzoo.cloudless-sky-cn"
+name = "晴空"
+kind = "filter"
+category = "日常"
+order = 15
+intensity = "sky"
+description = "让天空更加深邃湛蓝，植被色彩更冷静自然，同时不影响画面其他部分和人物面部，适合旅行视频。"
+
+[[param]]
+key = "sky"
+label = "天空"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "greens"
+label = "绿色植被"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"
+
+# The reference picture has no sky; the card pushes both bands so the
+# blue wall and the green jumper show the look.
+[card]
+params = { sky = 100, greens = 100 }

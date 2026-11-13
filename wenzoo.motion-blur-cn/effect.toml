@@ -1,0 +1,37 @@
+format = 2
+
+[effect]
+id = "wenzoo.motion-blur-cn"
+name = "运动模糊"
+kind = "effect"
+category = "模糊"
+order = 22
+version = 2
+intensity = "length"
+description = "沿指定方向产生线性拖影，模拟摄影机横向摇摄时的运动模糊。"
+
+[[param]]
+key = "length"
+label = "模糊长度"
+min = 2
+max = 60
+default = 18
+step = 1
+unit = "px"
+
+[[param]]
+key = "angle"
+label = "角度"
+min = -90
+max = 90
+default = 0
+step = 1
+unit = "°"
+
+[wgsl]
+entry = "effect.wgsl"
+
+# A coarse Gaussian along the line, then straight lines drawn between its
+# samples.
+[[wgsl.pass]]
+target = "coarse"

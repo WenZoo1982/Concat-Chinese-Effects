@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.dreamy-cn"
+name = "梦幻柔光"
+kind = "filter"
+category = "氛围"
+order = 66
+description = "在提亮的柔和粉彩暗部上叠加朦胧光晕，营造梦幻氛围。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

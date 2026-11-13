@@ -1,0 +1,41 @@
+format = 2
+
+[effect]
+id = "wenzoo.mono-cn"
+name = "单色滤镜"
+kind = "filter"
+category = "复古"
+order = 43
+intensity = "contrast"
+description = "通过彩色滤镜呈现黑白效果：红色滤镜会压暗天空并提亮肤色，绿色滤镜则相反。还可按需加入少量颗粒。"
+
+[[param]]
+key = "colour"
+label = "滤镜颜色"
+min = -100
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[[param]]
+key = "contrast"
+label = "对比度"
+min = 0
+max = 100
+default = 40
+step = 1
+unit = "%"
+
+[[param]]
+key = "grain"
+label = "颗粒"
+min = 0
+max = 100
+default = 0
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

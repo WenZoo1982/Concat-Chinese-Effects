@@ -1,0 +1,32 @@
+format = 2
+
+[effect]
+id = "wenzoo.falling-dust-cn"
+name = "飘落尘埃"
+kind = "filter"
+category = "复古"
+order = 46
+intensity = "dust"
+description = "营造温暖褪色效果，同时加入缓缓飘落的尘埃和角落的漏光。CPU 预览会显示褪色效果和轻微噪点。"
+
+[[param]]
+key = "dust"
+label = "尘埃强度"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+
+[[param]]
+key = "leak"
+label = "漏光强度"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"

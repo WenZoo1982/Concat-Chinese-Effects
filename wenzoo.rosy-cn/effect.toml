@@ -1,0 +1,13 @@
+format = 2
+
+[effect]
+id = "wenzoo.rosy-cn"
+name = "玫瑰柔粉"
+kind = "filter"
+category = "人像"
+order = 56
+description = "在高光中加入柔和的粉色提亮效果，让肤色更显柔和、温暖。"
+
+[wgsl]
+entry = "effect.wgsl"
+space = "display"
