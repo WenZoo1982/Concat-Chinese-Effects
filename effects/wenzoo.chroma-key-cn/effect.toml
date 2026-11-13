@@ -173,19 +173,6 @@ shrink = ["if(feather < 0.1, 64, 1)", "if(feather < 0.1, 64, 1)"]
 [card]
 screen = "#00b140"
 
-# The two screen keys this stands in for. They were keyed to pure green and
-# pure blue, which no real screen is; this finds the screen in the picture
-# instead. Neither cleaned spill, so the key's starts at none.
-[[replaces]]
-id = "concat.green-screen"
-defaults = { similarity = 25, softness = 10 }
-knobs = { spill = "0" }
-
-[[replaces]]
-id = "concat.blue-screen"
-defaults = { similarity = 25, softness = 10 }
-knobs = { spill = "0" }
-
 # This key before it measured the screen by its colour difference: a link
 # that still holds its similarity or softness is read as this one. The
 # colour it was keyed to and its spill carry over; its similarity, how far
