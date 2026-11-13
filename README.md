@@ -1,8 +1,8 @@
-# Concat 中文特效扩展
+# Concat 内置特效 - 汉化扩展
 
-Concat 内置特效的汉化扩展。Chinese localization for Concat built-in effects.
+为 Concat 桌面版内置特效提供简体中文汉化，方便中文用户识别和使用特效及其参数。
 
-本项目为 Concat 桌面版提供中文特效包，将部分内置特效的界面名称、参数标签、分类及说明翻译为简体中文，方便中文用户识别和使用。
+本项目目前包含 **132 个汉化特效包**，汉化内容包括特效名称、分类、参数标签及说明。
 
 ## 当前支持情况
 
@@ -16,63 +16,21 @@ Concat 内置特效的汉化扩展。Chinese localization for Concat built-in ef
 
 目前仅将 Windows x86_64 列为已验证平台。其他桌面平台及 Android 尚未完成验证。Concat 后续版本可能调整特效包格式或加载机制，不能据此推定未来版本始终兼容。
 
-## 安装方法
+## 获取方式
 
-1. 关闭 Concat。
-2. 下载本仓库，并解压到本地。
-3. 打开 Windows 文件资源管理器，在地址栏输入以下路径：
+项目提供以下两种 Windows x64 分发版本：
 
-   `%APPDATA%\app.concat.editor\effects`
+- **安装版**：使用安装程序部署汉化特效包。
+- **ZIP 手动部署版**：下载压缩包，手动解压并复制特效包文件。
 
-   对应的完整路径通常为：
-
-   `C:\Users\<用户名>\AppData\Roaming\app.concat.editor\effects`
-
-4. 如果目标位置没有 `effects` 文件夹，请自行创建。
-5. 打开解压后的项目目录，进入仓库中的 `effects` 文件夹。
-6. 将 `effects` 文件夹内的 132 个 `wenzoo.*-cn` 特效包文件夹，直接复制到 Concat 用户目录下的 `effects` 文件夹中。
-7. 重新启动 Concat。
-
-**重要：复制的是仓库 `effects` 目录里面的 132 个特效包文件夹，不是把仓库整个 `effects` 文件夹或项目根目录复制进去。** 不要在目标目录中额外套一层总文件夹。
-
-正确的仓库结构：
-
-```text
-Concat-Chinese-Effects/
-├── LICENSE
-├── NOTICE.md
-├── README.md
-└── effects/
-    ├── wenzoo.glow-cn/
-    │   └── effect.toml
-    ├── wenzoo.posterize-cn/
-    │   └── effect.toml
-    └── ...（共 132 个特效包）
-```
-
-正确的 Concat 用户特效目录结构：
-
-```text
-%APPDATA%\app.concat.editor\effects/
-├── wenzoo.glow-cn/
-│   └── effect.toml
-├── wenzoo.posterize-cn/
-│   └── effect.toml
-└── ...（共 132 个特效包）
-```
-
-Concat 会扫描 `effects` 目录的直接子文件夹。若额外套一层目录，特效包将无法按预期被发现。
-
-## 卸载方法
-
-关闭 Concat，然后从 Concat 用户目录的 `effects` 文件夹中删除本项目添加的 `wenzoo.*-cn` 文件夹即可。请勿删除其他来源的特效文件夹，也不要直接删除整个 `effects` 文件夹。
+请前往 [GitHub Releases](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases) 下载发行版文件。
 
 ## 项目来源与修改范围
 
 - 上游项目：[Concat](https://github.com/jub0t/Concat)
 - 上游特效包来源：Concat 仓库中的内置特效包。
 - 本项目包含 132 个汉化特效包。
-- 汉化修改集中在特效包清单文件 effect.toml，包括第三方特效包 ID、显示名称、分类、参数标签及说明等界面文本。
+- 汉化修改集中在特效包清单文件 `effect.toml`，包括第三方特效包 ID、显示名称、分类、参数标签及说明等界面文本。
 - 特效着色器及其他非清单资源文件保持上游原样，未作修改。
 
 本项目是由社区维护的第三方汉化扩展，与 Concat 原作者及官方项目没有隶属或背书关系。Concat 名称及相关商标仍归其权利人所有。
@@ -89,6 +47,6 @@ AGPL 允许使用、修改和再分发，但再分发时必须遵守许可证要
 
 **English**
 
-A Simplified Chinese localization extension for Concat's built-in effects. It currently contains 132 localized effect packages and has been tested with Concat v0.2.10 on Windows x86_64.
+A Simplified Chinese localization for Concat's built-in effects. This project includes 132 localized effect packages and has been tested with Concat v0.2.10 on Windows x86_64.
 
-See the sections above for installation instructions, compatibility notes, project provenance, and licensing.
+Windows x64 installer and manual ZIP distribution are available on the [GitHub Releases page](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases).
