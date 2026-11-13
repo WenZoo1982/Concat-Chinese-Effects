@@ -19,7 +19,8 @@ Concat 内置特效的汉化扩展。Chinese localization for Concat built-in ef
 ## 安装方法
 
 1. 关闭 Concat。
-2. 打开 Windows 文件资源管理器，在地址栏输入以下路径：
+2. 下载本仓库，并解压到本地。
+3. 打开 Windows 文件资源管理器，在地址栏输入以下路径：
 
    `%APPDATA%\app.concat.editor\effects`
 
@@ -27,29 +28,44 @@ Concat 内置特效的汉化扩展。Chinese localization for Concat built-in ef
 
    `C:\Users\<用户名>\AppData\Roaming\app.concat.editor\effects`
 
-3. 如果没有 effects 文件夹，请自行创建。
-4. 下载本仓库，并解压。
-5. 将仓库中的所有 wenzoo.*-cn 特效文件夹，直接复制到 effects 文件夹中。
-6. 重新启动 Concat。
+4. 如果目标位置没有 `effects` 文件夹，请自行创建。
+5. 打开解压后的项目目录，进入仓库中的 `effects` 文件夹。
+6. 将 `effects` 文件夹内的 132 个 `wenzoo.*-cn` 特效包文件夹，直接复制到 Concat 用户目录下的 `effects` 文件夹中。
+7. 重新启动 Concat。
 
-**重要：不要把所有特效文件夹再套进一个额外的总文件夹。**
+**重要：复制的是仓库 `effects` 目录里面的 132 个特效包文件夹，不是把仓库整个 `effects` 文件夹或项目根目录复制进去。** 不要在目标目录中额外套一层总文件夹。
 
-正确目录结构示例：
+正确的仓库结构：
 
 ```text
-effects/
+Concat-Chinese-Effects/
+├── LICENSE
+├── NOTICE.md
+├── README.md
+└── effects/
+    ├── wenzoo.glow-cn/
+    │   └── effect.toml
+    ├── wenzoo.posterize-cn/
+    │   └── effect.toml
+    └── ...（共 132 个特效包）
+```
+
+正确的 Concat 用户特效目录结构：
+
+```text
+%APPDATA%\app.concat.editor\effects/
 ├── wenzoo.glow-cn/
 │   └── effect.toml
 ├── wenzoo.posterize-cn/
 │   └── effect.toml
-└── ...
+└── ...（共 132 个特效包）
 ```
 
-Concat 会扫描 effects 目录的直接子文件夹。若额外套一层目录，特效包将无法按预期被发现。
+Concat 会扫描 `effects` 目录的直接子文件夹。若额外套一层目录，特效包将无法按预期被发现。
 
 ## 卸载方法
 
-关闭 Concat，然后从 effects 目录中删除本项目添加的 wenzoo.*-cn 文件夹即可。请勿删除其他来源的特效文件夹。
+关闭 Concat，然后从 Concat 用户目录的 `effects` 文件夹中删除本项目添加的 `wenzoo.*-cn` 文件夹即可。请勿删除其他来源的特效文件夹，也不要直接删除整个 `effects` 文件夹。
 
 ## 项目来源与修改范围
 
