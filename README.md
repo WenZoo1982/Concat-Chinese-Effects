@@ -1,29 +1,46 @@
-# Concat 内置特效 - 汉化扩展
+# Concat 内置特效 - 简体中文汉化扩展
 
 为 Concat 桌面版内置特效提供简体中文汉化，方便中文用户识别和使用特效及其参数。
 
-本项目目前包含 **132 个汉化特效包**，汉化内容包括特效名称、分类、参数标签及说明。
+本项目包含 **132 个汉化特效包**，汉化内容包括特效名称、分类、参数标签及说明。项目提供 Windows 和 Linux 平台的发行支持。
 
 ## 当前支持情况
 
 | 项目 | 当前状态 |
 |---|---|
-| Concat 版本 | v0.2.10 |
-| 已验证平台 | Windows x86_64 |
+| Concat 版本 | v0.2.11 |
+| Windows | x86_64，已验证 |
+| Linux | x86_64，已在 Linux Mint 22.3 验证 |
 | 汉化语言 | 简体中文 |
 | 特效包数量 | 132 |
-| 验证情况 | 已在上述环境中加载并实际使用 |
+| Linux 安装方式 | DEB 软件包，已完成安装及软件内测试 |
 
-目前仅将 Windows x86_64 列为已验证平台。其他桌面平台及 Android 尚未完成验证。Concat 后续版本可能调整特效包格式或加载机制，不能据此推定未来版本始终兼容。
+Linux 版已在 Linux Mint 22.3 x86_64 上验证：安装 DEB 后，132 个特效会自动部署到每个现有普通用户自己的 `~/.config/app.concat.editor/effects/` 目录，并已通过 Concat 软件内加载和使用测试。
+
+Linux 发行目标为 Debian、Ubuntu 和 Linux Mint。目前实际验证的 Linux 发行版为 Linux Mint 22.3；Debian 和 Ubuntu 尚未完成实机验证。其他桌面平台及 Android 尚未完成验证。Concat 后续版本可能调整特效包格式或加载机制，不能据此推定未来版本始终兼容。
 
 ## 获取方式
 
-项目提供以下两种 Windows x64 分发版本：
-
-- **安装版**：使用安装程序部署汉化特效包。
-- **ZIP 手动部署版**：下载压缩包，手动解压并复制特效包文件。
-
 请前往 [GitHub Releases](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases) 下载发行版文件。
+
+- **Windows x64**：提供安装程序和 ZIP 手动部署包。
+- **Linux x86_64**：提供 DEB 安装包。
+
+### Linux 安装
+
+下载 `concat-chinese-effects_1.0.0_all.deb` 后，在下载目录打开终端执行：
+
+```bash
+sudo apt install ./concat-chinese-effects_1.0.0_all.deb
+```
+
+安装程序会识别系统中已有的普通用户账户，并将汉化特效部署到各自的 Concat 默认特效目录：
+
+```text
+~/.config/app.concat.editor/effects/
+```
+
+安装后，在 Concat 的特效页面刷新自定义特效即可。卸载 DEB 软件包不会删除用户目录中的特效文件。
 
 ## 项目来源与修改范围
 
@@ -47,6 +64,8 @@ AGPL 允许使用、修改和再分发，但再分发时必须遵守许可证要
 
 **English**
 
-A Simplified Chinese localization for Concat's built-in effects. This project includes 132 localized effect packages and has been tested with Concat v0.2.10 on Windows x86_64.
+A Simplified Chinese localization for Concat's built-in effects. This project includes 132 localized effect packages and supports Windows x86_64 and Linux x86_64. It has been tested with Concat v0.2.11 on Windows and Linux Mint 22.3.
 
-Windows x64 installer and manual ZIP distribution are available on the [GitHub Releases page](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases).
+The Linux DEB package installs the effects into the default Concat effects directory for existing regular user accounts. Debian and Ubuntu are distribution targets but have not yet been tested on real systems.
+
+Windows x64 installer, manual ZIP package, and Linux x86_64 DEB package are available on the [GitHub Releases page](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases).
