@@ -13,9 +13,9 @@
 | Linux | x86_64，已在 Linux Mint 22.3 验证 |
 | 汉化语言 | 简体中文 |
 | 特效包数量 | 132 |
-| Linux 安装方式 | DEB 软件包，已完成安装及软件内测试 |
+| Linux 安装方式 | DEB 软件包 |
 
-Linux 版已在 Linux Mint 22.3 x86_64 上验证：安装 DEB 后，132 个特效会自动部署到每个现有普通用户自己的 `~/.config/app.concat.editor/effects/` 目录，并已通过 Concat 软件内加载和使用测试。
+Linux 版已在 Linux Mint 22.3 x86_64 上验证，安装后可将 132 个特效部署到当前安装用户的 Concat 默认特效目录，并通过 Concat 软件内加载和使用测试。
 
 Linux 发行目标为 Debian、Ubuntu 和 Linux Mint。目前实际验证的 Linux 发行版为 Linux Mint 22.3；Debian 和 Ubuntu 尚未完成实机验证。其他桌面平台及 Android 尚未完成验证。Concat 后续版本可能调整特效包格式或加载机制，不能据此推定未来版本始终兼容。
 
@@ -26,21 +26,35 @@ Linux 发行目标为 Debian、Ubuntu 和 Linux Mint。目前实际验证的 Lin
 - **Windows x64**：提供安装程序和 ZIP 手动部署包。
 - **Linux x86_64**：提供 DEB 安装包。
 
-### Linux 安装
+## Linux 安装
 
-下载 `concat-chinese-effects_1.0.0_all.deb` 后，在下载目录打开终端执行：
+下载 `concat-chinese-effects-1.0.0-Linux-x86-64.deb` 后，在下载目录打开终端，执行：
 
 ```bash
-sudo apt install ./concat-chinese-effects_1.0.0_all.deb
+sudo apt install ./concat-chinese-effects-1.0.0-Linux-x86-64.deb
 ```
 
-安装程序会识别系统中已有的普通用户账户，并将汉化特效部署到各自的 Concat 默认特效目录：
+如果已经安装过相同版本，需要重新安装时，执行：
+
+```bash
+sudo apt install --reinstall ./concat-chinese-effects-1.0.0-Linux-x86-64.deb
+```
+
+安装程序会识别当前安装用户，并将汉化特效部署到该用户的 Concat 默认特效目录：
 
 ```text
 ~/.config/app.concat.editor/effects/
 ```
 
-安装后，在 Concat 的特效页面刷新自定义特效即可。卸载 DEB 软件包不会删除用户目录中的特效文件。
+例如，用户 `wenzoo` 的安装位置为：
+
+```text
+/home/wenzoo/.config/app.concat.editor/effects/
+```
+
+安装时，同名文件会被覆盖更新，目标目录中的其他文件会保留。卸载 DEB 软件包不会自动删除用户目录中的特效文件。
+
+安装完成后，在 Concat 中刷新或重新打开特效页面即可使用。
 
 ## 项目来源与修改范围
 
@@ -66,6 +80,10 @@ AGPL 允许使用、修改和再分发，但再分发时必须遵守许可证要
 
 A Simplified Chinese localization for Concat's built-in effects. This project includes 132 localized effect packages and supports Windows x86_64 and Linux x86_64. It has been tested with Concat v0.2.11 on Windows and Linux Mint 22.3.
 
-The Linux DEB package installs the effects into the default Concat effects directory for existing regular user accounts. Debian and Ubuntu are distribution targets but have not yet been tested on real systems.
+The Linux DEB package installs the effects into the current installing user's default Concat effects directory:
 
-Windows x64 installer, manual ZIP package, and Linux x86_64 DEB package are available on the [GitHub Releases page](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases).
+`~/.config/app.concat.editor/effects/`
+
+Files with matching names are overwritten during installation, while other files in the destination directory are preserved. Uninstalling the DEB package does not automatically remove the user's effects files.
+
+The Linux DEB package is available on the [GitHub Releases page](https://github.com/WenZoo1982/Concat-Chinese-Effects/releases).
